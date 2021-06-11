@@ -18,22 +18,28 @@ alert(array);
 var timeleft = 5;
 // Variabile che richiama la function Setinterval
 var downloadTimer = setInterval(countDown, 1000);
+console.log(downloadTimer);
 
 
-if (downloadTimer === 0) {
+if (downloadTimer == 0) {
     var numero = parseInt(prompt('INSERISCI I NUMERI'));
-    alert('numero indoivinato');
+
 };
 
 
 function countDown() {
-    if (timeleft <= 0) {
+    while (timeleft <= 0) {
         clearInterval(downloadTimer);
-        document.getElementById("countdown").innerHTML = 0;
-    }
-    else {
-        document.getElementById("countdown").innerHTML = timeleft + " Secondi Rimasti";
-    }
+        var numero = parseInt(prompt('INSERISCI I NUMERI'));
+        if (numero = array[i]) {
+            document.getElementById("countdown").innerHTML = numero;
+        } else if {
+            document.getElementById("countdown").innerHTML = 'inseriscine un altro';
+        }
+        
+    } if
+    document.getElementById("countdown").innerHTML = timeleft + " Secondi Rimasti";
+
     timeleft--;
 };
 
