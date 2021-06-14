@@ -12,44 +12,43 @@
 
 //----------JS SIMON----------//
 // ALERT CHE ESPONE 5 NUMERI CASUALI
-var array = generaArray(5)
-alert(array);
-// PARTE UN TIMER DI 30 SECONDI 
-var timeleft = 5;
-// Variabile che richiama la function Setinterval
-var downloadTimer = setInterval(countDown, 1000);
-console.log(downloadTimer);
+
+//-----------ESERCIZIO CORRETTO-----------//
+var randomNumbers = [];
+var numeri = 5;
 
 
-if (downloadTimer == 0) {
-    var numero = parseInt(prompt('INSERISCI I NUMERI'));
-
-};
-
-
-function countDown() {
-    while (timeleft <= 0) {
-        clearInterval(downloadTimer);
-        var numero = parseInt(prompt('INSERISCI I NUMERI'));
-        if (numero = array[i]) {
-            document.getElementById("countdown").innerHTML = numero;
-        } else if {
-            document.getElementById("countdown").innerHTML = 'inseriscine un altro';
-        }
-        
-    } if
-    document.getElementById("countdown").innerHTML = timeleft + " Secondi Rimasti";
-
-    timeleft--;
-};
-
-//--------FUNCTIONS------//
-// FUNCTION ARRAY CON 5 ELEMENTI
-function generaArray(longArray) {
-    var array = [];
-    while (array.length < longArray) {
-        var numeroRandom = Math.floor(Math.random() * 10);
-        array.push(numeroRandom);
+while (randomNumbers.length < numeri) {
+    var numeroRandom = numeriRandom(1, 7);
+    console.log(numeroRandom);
+    if (!randomNumbers.includes(numeroRandom)) {
+        randomNumbers.push(numeroRandom);
     }
-    return array;
+
+};
+
+alert(randomNumbers);
+
+
+//--------FUNCTIONS--------//
+setTimeout(function () {
+    var users = [];
+    for (var i = 0; i < numeri; i++) {
+        var numeroUtente = parseInt(prompt('Inserisci un Numero'));
+        if (randomNumbers.includes(numeroUtente) && !users.includes(numeroUtente)) {
+            users.push(numeroUtente);
+        }
+        console.log(users);
+    }
+
+
+    if (users.length == 0) {
+        console.log('non hai indovinato nessun numero');
+    } else {
+        console.log('hai indovinato' + users.length + 'numeri');
+    }
+}, 30000);
+
+function numeriRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 };
