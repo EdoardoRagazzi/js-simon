@@ -12,6 +12,52 @@
 
 //----------JS SIMON----------//
 // ALERT CHE ESPONE 5 NUMERI CASUALI
+/*
+var array = generaArray(5)
+alert(array);
+
+// PARTE UN TIMER DI 30 SECONDI 
+var timeleft = 5;
+// Variabile che richiama la function Setinterval
+var downloadTimer = setInterval(countDown, 1000);
+console.log(downloadTimer);
+
+
+if (downloadTimer == 0) {
+    var numero = parseInt(prompt('INSERISCI I NUMERI'));
+
+};
+
+
+function countDown() {
+    while (timeleft <= 0) {
+        clearInterval(downloadTimer);
+        var numero = parseInt(prompt('INSERISCI I NUMERI'));
+        if (numero = array[i]) {
+            document.getElementById("countdown").innerHTML = numero;
+        } else if {
+            document.getElementById("countdown").innerHTML = 'inseriscine un altro';
+        }
+        
+    } if
+    document.getElementById("countdown").innerHTML = timeleft + " Secondi Rimasti";
+
+    timeleft--;
+};
+
+//--------FUNCTIONS------//
+// FUNCTION ARRAY CON 5 ELEMENTI
+function generaArray(longArray) {
+    var array = [];
+    while (array.length < longArray) {
+        var numeroRandom = Math.floor(Math.random() * 10);
+        array.push(numeroRandom);
+    }
+    return array;
+};
+
+*/
+
 
 //-----------ESERCIZIO CORRETTO-----------//
 var randomNumbers = [];
